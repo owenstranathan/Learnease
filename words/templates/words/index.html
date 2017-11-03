@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+</head>
+
+<body>
+    <table>
+        <th>
+            <td> simplified_chinese </td>
+            <td> tonal_pinyin </td>
+            <td> definition </td>
+        </th>
+        {% for word in words %}
+            <tr>
+                <td> {{word.simplified_chinese}} </td>
+                <td> {{word.tonal_pinyin}} </td>
+                <td> {{word.definition}}</td>
+            </tr>
+        {% endfor %}
+    </table>
+
+</body>
+
+</html>
