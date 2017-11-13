@@ -20,7 +20,7 @@ from words import views as WordsViews
 
 
 urlpatterns = [
-    url(r'^$', WordsViews.index, name="wordsIndex"),
+    url(r'^$', WordsViews.home, name="home"),
     url(r'^words/', include('words.urls')),
     url(r'^admin/', admin.site.urls),
 ]

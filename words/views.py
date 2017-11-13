@@ -7,6 +7,10 @@ import logging as Log
 from .forms import LookupForm
 # Create your views here.
 
+def home(request):
+    return render(request, "base.html")
+
+
 def index(request):
     words = Word.objects.all()
     return render(request, "words/index.html", {'words': words})
