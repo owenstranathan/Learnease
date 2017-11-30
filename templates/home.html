@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% block nav-crumb%}
+    <li><a href="{% url 'home' %}">Home[首页]</a></li>
+{% endblock %}
+
+{% block page-head %}
+<h1>Welcome![欢迎光临]</h1>
+<br>
+{% endblock %}
+
+{% block body %}
+<div id="paragraph">
+    <article class="row">
+        <p class="lead">Congratulations! You've found Learnease. If you haven't figured it out yet, learnease is a site dedicated to learning chinese.<br>
+        In case you were wondering (I know I'm dying to tell you) the [易sy] next to the page name is the chinese character 易 it makes the sound you make when you say the name of the letter "E". Only it has a tone, but don't worry about tones yet.<br>
+        易 is the first character in the chinese word for easy, <mark>容易</mark> which is pronounced <mark>róngyì</mark> kinda sounds like your saying "wrongy" <br>
+         <br>
+        So if 易 sounds like "E" the 易sy sounds like E-sy which is an amazing conjunction I've made, and also you've learned something.
+        <br>From here out I'm going to assume familiarity with Pinyin, and start using it to pheonetically write chinese words
+         If you can't read pinyin, or your like “dafuq is pinyin?” then click this sexy sexy button <a type="button" class="btn u">教我</a>  which I will helpfully place next to things that you might want to know more about </p>
+        <div class="col span-1-2 span-tablet-vertical-1-1">
+          <div class="doc doc-red-head">
+            <div class="doc-title">
+              <h2>易</h2>
+            </div>
+            <div class="doc-content">
+              <article>
+              </article>
+            </div>
+          </div>
+        </div>
+
+        <p>每览昔人兴感之由，若合一契，未尝不临文嗟悼，不能喻之于怀。固知一死生为虚诞，齐彭殇为妄作。后之视今，亦犹今之视昔，悲夫！故列叙时人，录其所述。虽世殊事异，所以兴怀，其致一也。后之览者，亦将有感于斯文。</p>
+    </article>
+    <article class="row responsive-text">
+        <p>永和九年，岁在癸丑，暮春之初，会于会稽山阴之兰亭，修禊事也。群贤毕至，少长咸集。此地有崇山峻岭，茂林修竹，又有清流激湍，映带左右。引以为流觞曲水，列坐其次，虽无丝竹管弦之盛，一觞一咏，亦足以畅叙幽情。</p>
+        <p>是日也，<a href="#">天朗气清</a>，惠风和畅。仰观宇宙之大，俯察品类之盛，所以游目骋怀，足以极视听之娱，信可乐也。</p>
+        <p>夫人之相与，<u>俯仰一世</u>。或<mark>取诸怀抱，晤言一室之内</mark><sup>注释一</sup>；或因寄所托，<del>放浪形骸之外</del>。虽趣舍万殊，<em>静躁不同</em>，当其欣于所遇，暂得于己，怏然自足，不知老之将至。及其所之既倦，<abbr>情随事迁</abbr>，感慨系之矣<sub>脚注一</sub>。向之所欣，俯仰之间，已为陈迹，犹不能不以之兴怀。况修短随化，终期于尽。古人云：“死生亦大矣。”岂不痛哉！</p>
+        <p>每览昔人兴感之由，若合一契，未尝不临文嗟悼，不能喻之于怀。固知一死生为虚诞，齐彭殇为妄作。后之视今，亦犹今之视昔，悲夫！故列叙时人，录其所述。虽世殊事异，所以兴怀，其致一也。后之览者，亦将有感于斯文。</p>
+    </article>
+</div>
+
+{% endblock %}

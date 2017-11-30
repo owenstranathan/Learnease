@@ -19,12 +19,12 @@ from django.db import models
 
 class Word(models.Model):
     HSK_LEVEL_CHOICES= (
-        (1,"1"),
-        (2,"2"),
-        (3,"3"),
-        (4,"4"),
-        (5,"5"),
-        (6,"6"),
+        ("1","1"),
+        ("2","2"),
+        ("3","3"),
+        ("4","4"),
+        ("5","5"),
+        ("6","6"),
     )
     hsk_level = models.CharField(max_length=1, choices=HSK_LEVEL_CHOICES, default=1)
 
@@ -33,6 +33,8 @@ class Word(models.Model):
     numbered_pinyin = models.CharField(max_length=40)
     tonal_pinyin = models.CharField(max_length=40)
     definition = models.CharField(max_length=360)
+
+    notes = models.TextField(null=True)
 
 
     def __str__(self):
