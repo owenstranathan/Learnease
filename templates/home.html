@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load word_extras %}
 {% block nav-crumb%}
     <li><a href="{% url 'home' %}">Home[首页]</a></li>
 {% endblock %}
@@ -17,7 +18,7 @@
          <br>
         So if 易 sounds like "E" the 易sy sounds like E-sy which is an amazing conjunction I've made, and also you've learned something.
         <br>From here out I'm going to assume familiarity with Pinyin, and start using it to pheonetically write chinese words
-         If you can't read pinyin, or your like “dafuq is pinyin?” then click this sexy sexy button <a type="button" class="btn u">教我</a>  which I will helpfully place next to things that you might want to know more about </p>
+         If you can't read pinyin, or your like “dafuq is pinyin?” then click this sexy sexy button {% teach_me "#" %}  which I will helpfully place next to things that you might want to know more about </p>
         <div class="col span-1-2 span-tablet-vertical-1-1">
           <div class="doc doc-red-head">
             <div class="doc-title">
