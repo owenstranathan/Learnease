@@ -102,3 +102,6 @@ ENV/
 
 # Mac Resource
 .DS_Store
+
+# Pipenv
+Pipfile.lock
