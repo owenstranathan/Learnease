@@ -14,6 +14,8 @@ def lookup(request):
 def home(request):
     return render(request, "home.html")
 
+def pinyin(request):
+    return render(request, "pinyin.html")
 
 def index(request):
     words = Word.objects.all()
