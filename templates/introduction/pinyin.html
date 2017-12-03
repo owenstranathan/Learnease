@@ -2,8 +2,8 @@
 {% load word_extras %}
 
 {% block  nav-crumb %}
-    <li><a href="{% url 'home' %}">Home[首页]</a></li>
-    <li><a href="{% url 'home' %}">Pinyin[拼音]</a></li>
+    <li><a href="{% url 'introduction' 'index' %}">Introduction[介绍]</a></li>
+    <li><a href="{% url 'introduction' 'pinyin' %}">Pinyin[拼音]</a></li>
 {% endblock %}
 
 {% block page-head %}

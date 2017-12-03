@@ -1,5 +1,6 @@
 from django import template
 from django.utils.html import mark_safe
+from django.urls import reverse
 
 from words.models import Word
 
@@ -33,5 +34,11 @@ def word_card(simplified):
 
 
 @register.simple_tag
-def teach_me(url):
-    return mark_safe("<a type='button' class='btn u' href='{0}'>教我</a>".format(url))
+def teach_me(url_name, *args, **kwargs):
+    if not kwargs.get("text", None):
+        text = "教我"
+    else:
+        text = kwargs["text"]
+    url = reverse(url_name, args=args)
+    return mark_safe("<a type='button' class='btn r' href='{url}'>{text}</a>".format(url=url,
+                                                                                     text=text))

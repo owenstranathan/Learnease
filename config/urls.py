@@ -22,6 +22,7 @@ from words import views as WordsViews
 
 urlpatterns = [
     url(r'^$', WordsViews.home, name="home"),
+    url(r'^introduction/(?P<page_name>[A-Za-z]+)$', WordsViews.introduction, name='introduction'),
     url(r'^pinyin/$', WordsViews.pinyin, name="pinyin"),
     url(r'^words/', include('words.urls')),
     url(r'^admin/', admin.site.urls),

@@ -5,37 +5,73 @@
 {% endblock %}
 
 {% block page-head %}
-<h1>Welcome![欢迎光临]</h1>
-<br>
+    <h1 style="margin-top:0px; margin-right:0.15em; margin-left:0.06em">
+        learn it <span style="font-size:60px; font-weight:400">易</span>sy!
+        <div class="right">{% teach_me 'introduction' 'welcome' text="Introduction"%}</div>
+    </h1>
+
 {% endblock %}
 
 {% block body %}
-<div id="paragraph">
-    <article class="row">
-        <p class="lead">Congratulations! You've found Learnease. If you haven't figured it out yet, learnease is a site dedicated to learning chinese.<br>
-            In case you were wondering (I know I'm dying to tell you) the [易sy] next to the page name is the chinese character 易 it makes the sound you
-            make when you say the name of the letter "E". Only it has a tone, but don't worry about tones yet.<br>
-            易 is the first character in the chinese word for easy, <mark>容易</mark> which is pronounced <mark>róng yì</mark> kinda sounds like your saying "wrongy" <br>
-            <br>
-            So if 易 sounds like "E" then 易sy sounds like E-sy which is an amazing conjunction I've made, and also you've learned something! &#128079;
-            <br><br>
-            From here out I'm going to assume you have familiarity with Pinyin, and start using it to pheonetically write chinese words. <br>
-            If you can't read pinyin, or your like “dafuq is pinyin?” then click this sexy sexy button {% teach_me "pinyin" %}  which I will helpfully place next to things
-            that you might want to know more about it says, <mark>教我</mark> pinyin: <mark>jiào wǒ</mark> which means ”teach[教] me[我]" </p>
-         <div class="col span-1-3 span-tablet-vertical-1-1">
-             {% word_card "容易"%}
-         </div>
-         <br>
-         <br>
-        <p> You：Woah woah woah brah.... what's that card thingy?</p>
-        <p> Me: That's a motha-flippin werd card. It's gonna show you chinesy words and their meanings.</p>
-        <p> Me: This card right her is the card for 容易. It's an HSK level 3 word, but guess what you already learn it. Easy...</p>
-        <br>
-        <p> Literally... </p>
-    </article>
-    <article class="row responsive-text">
-        <p> Alright. Let's get started. Select an HSK level in the nav to get learneasing.</p>
-    </article>
-</div>
+<div class="row">
+    <div class="col span-1-2 span-tablet-vertical-1-1">
+        <div class="doc">
+            <div class="doc-title">
+                <h2>HSK 1 [汉语水平第一]</h2>
+            </div>
+            <div class="doc-content">
+                Learn and study vocabulary in the <mark>first level</mark> of the standarized chinese fluency test
+                {% teach_me 'HSK' '1' text="teach me!"%}
+            </div>
+        </div>
+    </div>
 
+    <div class="col span-1-2 span-tablet-vertical-1-1">
+        <div class="doc">
+            <div class="doc-title"><h2>HSK 2 [汉语水平第二]</h2></div>
+            <div class="doc-content">
+                Learn and study vocabulary in the <mark>second level</mark> of the standarized chinese level test
+                {% teach_me 'HSK' '2'%}
+            </div>
+        </div>
+    </div>
+
+    <div class="col span-1-2 span-tablet-vertical-1-1">
+        <div class="doc">
+            <div class="doc-title"><h2>HSK 3 [汉语水平第三]</h2></div>
+            <div class="doc-content">
+                Learn and study vocabulary in the <mark>third level</mark> of the standarized chinese level test
+                {% teach_me 'HSK' '3'%}
+            </div>
+        </div>
+    </div>
+
+    <div class="col span-1-2 span-tablet-vertical-1-1">
+        <div class="doc">
+            <div class="doc-title"><h2>HSK 4 [汉语水平第四]</h2></div>
+            <div class="doc-content">
+                Learn and study vocabulary in the <mark>fourth level</mark> of the standarized chinese level test
+                {% teach_me 'HSK' '4'%}
+            </div>
+        </div>
+    </div>
+    <div class="col span-1-2 span-tablet-vertical-1-1">
+        <div class="doc">
+            <div class="doc-title"><h2>HSK 5 [汉语水平第五]</h2></div>
+            <div class="doc-content">
+                Learn and study vocabulary in the <mark>fifth level</mark> of the standarized chinese level test
+                {% teach_me 'HSK' '5'%}
+            </div>
+        </div>
+    </div>
+    <div class="col span-1-2 span-tablet-vertical-1-1">
+        <div class="doc">
+            <div class="doc-title"><h2>HSK 6 [汉语水平第六]</h2></div>
+            <div class="doc-content">
+                Learn and study vocabulary in the <mark>sixth level</mark> of the standarized chinese level test
+                {% teach_me 'HSK' '6'%}
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}

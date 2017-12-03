@@ -1,0 +1,13 @@
+.foot {
+    font-family: "Source Han Sans", "Hiragino Sans", "Hiragino Sans GB", "Microsoft Yahei", sans-serif;
+    -webkit-transform: rotate(270deg);
+    -moz-transform:    rotate(270deg);
+    -ms-transform:     rotate(270deg);
+    -o-transform:      rotate(270deg);
+    position: fixed;
+    display: block;
+    bottom: 20%;
+    right: -110px;
+    /*margin: -100px 0 0 0;*/
+
+}

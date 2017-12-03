@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load word_extras %}
+
+{% block nav-crumb %}
+    <li><a href="{% url 'introduction' 'index' %}">Introduction[介绍]</a></li>
+{% endblock %}
+
+{% block page-head %}
+    <h1>Intro to 易sy</h1>
+    <br>
+{% endblock %}
+
+
+{% block body %}
+    <div id=paragraph>
+        <article class="row">
+            <p class="lead">
+                Just starting out? <br/>
+                Learning chinese is a challenge, and you're gonna have to go back and read things over and over. <br/>
+                Use this area as your reference guide to learning. <br/>
+                Can't remember how something works in pinyin? Go check out the page on pinyin. {% teach_me 'introduction' 'pinyin' %} <br/>
+                Not sure if you're studying effectively? Read the page on how to learn chinese.{% teach_me 'introduction' 'index'%} <br/> <!-- FIXME: change url -->
+            </p>
+{% endblock %}
