@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% load word_extras %}
+{% block nav-crumb %}
+    <li><a href="{% url 'HSK' level %}">HSK {{level}}</a></li> <!-- FIXME: change url to be generic -->
+{% endblock %}
+
+{% block page-head %}
+    <h1> HSK Level {{level}} </h1>
+{% endblock %}
+
+{% block body %}
+    <h3> WELCOME!</h3>
+    <p class="lead">
+        It's fantastic that you're here. I'm not gonna sugar coat it, chinese is hard AF. But you can Learn
+        anything, all you need is the right attitude and the right resources. I can't do much about your attitude other than
+        be incouraging... {% bold "You can do it!" 700 %}. <br/>
+    </p>
+    <p class="lead">
+        However I can help you out in the resources department. Contained in this corner of the site is the informational resources of the:<br/>
+        <br/>
+        <mark>汉语水平考试</mark>&nbsp; {% bold "H" 400 %}ànyǔ {% bold "S" 400 %}huǐpíng {% bold "K" 400 %}ǎoshì or the HSK as it's commonly refered to. <br/>
+        Get going then... There's lots to learn...
+    </p>
+    <div class="row">
+        <div class="col span-1-2 span-tablet-vertical-1-1">
+            <div class="doc">
+                <div class="doc-title">
+                    <h2>Flash Cards</h2>
+                </div>
+                <div class="doc-content">
+                    You know what this is. You gotta build that vocab, and flash cards are how it's gonna happen
+                    {% teach_me 'HSK' '1'%}
+                </div>
+            </div>
+        </div>
+        <div class="col span-1-2 span-tablet-vertical-1-1">
+            <div class="doc">
+                <div class="doc-title">
+                    <h2>Word list</h2>
+                </div>
+                <div class="doc-content">
+                    Check out the whole vocabulary list in a pretty table and search for a specific word
+                    {% teach_me 'HSK' '1' %}
+                </div>
+            </div>
+        </div>
+        {% menu_block 'span-4-7 centered' 'Radical Learner' "Learn the radicals relevant to this level. It's totally radical! " 'HSK' '1' %}
+    </div>
+{% endblock %}

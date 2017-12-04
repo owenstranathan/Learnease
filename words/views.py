@@ -43,7 +43,11 @@ def detail(request, word_id):
 
 def hsk(request, level):
     hsk = Word.objects.filter(hsk_level=level)
-    return render(request,"words/index.html", {"words": hsk})
+    payload = {
+        'level': level,
+        'words': hsk,
+    }
+    return render(request, "words/hsk.html", payload)
 
 
 def total(request):

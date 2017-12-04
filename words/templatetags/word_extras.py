@@ -8,6 +8,25 @@ register = template.Library()
 
 
 @register.simple_tag
+def menu_block(positioning, title, content, dest_url, *args, **kwargs):
+    html = (
+        "<div class='row'>" +
+            "<div class='col {positioning} span-tablet-vertical-1-1'>".format(positioning=positioning) +
+                "<div class='doc'>" +
+                    "<div class='doc-title'>" +
+                        "<h2>{title}</h2>".format(title=title) +
+                    "</div>" +
+                    "<div class='doc-content'>" +
+                        content +
+                        teach_me(dest_url, *args, **kwargs) +
+                    "</div>" +
+                "</div>" +
+            "</div>"
+    )
+    return mark_safe(html)
+
+
+@register.simple_tag
 def word_card(simplified):
     word = Word.objects.filter(simplified_chinese=simplified)
     word = word.first()
@@ -42,3 +61,9 @@ def teach_me(url_name, *args, **kwargs):
     url = reverse(url_name, args=args)
     return mark_safe("<a type='button' class='btn r' href='{url}'>{text}</a>".format(url=url,
                                                                                      text=text))
+
+
+@register.simple_tag
+def bold(text, weight):
+    return mark_safe("<span style='font-weight:{weight}'>{text}</span>".format(text=text,
+                                                                               weight=weight))
